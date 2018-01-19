@@ -1,0 +1,42 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dt_created": {
+      "type": "date"
+    },
+    "dt_modified": {
+      "type": "date"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "categories": {
+      "type": "hasMany",
+      "model": "category",
+      "foreignKey": ""
+    },
+    "tags": {
+      "type": "hasMany",
+      "model": "tag",
+      "foreignKey": ""
+    },
+    "transactions": {
+      "type": "hasMany",
+      "model": "transaction",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
